@@ -39,7 +39,7 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
   let listPathImages: Array<string> = [];
 
   app.get("/filteredimage", async (req, res) => {
-    let url = req.query.image_url;
+    let url: any = req.query.image_url;
     if (url) {
       filterImageFromURL(url)
         .then((pathImage) => {
